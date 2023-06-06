@@ -8,4 +8,8 @@
     <string name="uninstall_ignored">Uninstall ignored</string>
     <string name="dialog_fragment_default">Dialog Fragment (default)</string>
     <string name="dialog_fragment_level_1">Dialog Fragment, level 1</string>
+    <string name="dialog_fragment_single_choice">Dialog Fragment (single choice</string>
+    <string name="dialog_fragment_single_choice_with_confirmation">Dialog Fragment (single choice with confirmation</string>
+    <string name="dialog_fragment_multiple_choice">Dialog Fragment (multiple choice)</string>
+    <string name="dialog_fragment_multiple_choice_with_confirmation">Dialog Fragment (multiple choice with confirmation</string>
 </resources>

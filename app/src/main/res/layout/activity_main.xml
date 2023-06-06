@@ -30,12 +30,40 @@
         app:layout_constraintTop_toBottomOf="@id/tv_level1_title" />
 
     <Button
-        android:id="@+id/button_"
+        android:id="@+id/button_single_choice"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:text="@string/dialog_fragment_default"
+        android:text="@string/dialog_fragment_single_choice"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/tv_level1_title" />
+        app:layout_constraintTop_toBottomOf="@id/button_default" />
+
+    <Button
+        android:id="@+id/button_single_choice_with_confirm"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="@string/dialog_fragment_single_choice_with_confirmation"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/button_single_choice" />
+
+    <Button
+        android:id="@+id/button_multiple_choice"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="@string/dialog_fragment_multiple_choice"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/button_single_choice_with_confirm" />
+
+    <Button
+        android:id="@+id/button_multiple_choice_with_confirm"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="@string/dialog_fragment_multiple_choice_with_confirmation"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/button_multiple_choice" />
+
 
 </androidx.constraintlayout.widget.ConstraintLayout>
