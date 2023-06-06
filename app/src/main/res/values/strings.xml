@@ -1,3 +1,11 @@
 <resources>
     <string name="app_name">DialogFragment</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="dialog_cancelled">Dialog cancelled!</string>
+    <string name="uninstall_confirmed">Uninstall confirmed</string>
+    <string name="uninstall_rejected">Uninstall rejected</string>
+    <string name="uninstall_ignored">Uninstall ignored</string>
+    <string name="dialog_fragment_default">Dialog Fragment (default)</string>
+    <string name="dialog_fragment_level_1">Dialog Fragment, level 1</string>
 </resources>
