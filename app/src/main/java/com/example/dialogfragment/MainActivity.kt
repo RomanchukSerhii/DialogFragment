@@ -1,10 +1,12 @@
 package com.example.dialogfragment
 
 import android.content.DialogInterface
+import android.graphics.Color
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
 import androidx.fragment.app.FragmentResultListener
 import com.example.dialogfragment.databinding.ActivityMainBinding
+import com.example.dialogfragment.level1.MultipleChoiceDialogFragment
 import com.example.dialogfragment.level1.SimpleDialogFragment
 import com.example.dialogfragment.level1.SingleChoiceDialogFragment
 import com.example.dialogfragment.level1.SingleChoiceWithConfirmationDialogFragment
@@ -17,6 +19,7 @@ class MainActivity : AppCompatActivity() {
     }
 
     private var volume by notNull<Int>()
+    private var color by notNull<Int>()
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -30,11 +33,18 @@ class MainActivity : AppCompatActivity() {
         binding.buttonSingleChoiceWithConfirm.setOnClickListener {
             showSingleChoiceWithConfirmationDialogFragment()
         }
+        binding.buttonMultipleChoice.setOnClickListener {
+            showMultipleChoiceDialogFragment()
+        }
+
         volume = savedInstanceState?.getInt(KEY_VOLUME) ?: 50
+        color = savedInstanceState?.getInt(KEY_COLOR) ?: Color.RED
+        updateUi()
+
         setupSimpleDialogFragmentListener()
         setupSingleChoiceDialogFragmentListener()
-        setupSingleChoiceWithConfirmationDialogFragment()
-        updateUi()
+        setupSingleChoiceWithConfirmationDialogFragmentListener()
+        setupMultipleChoiceDialogFragmentListener()
     }
 
     private fun showSimpleDialogFragment() {
@@ -72,19 +82,31 @@ class MainActivity : AppCompatActivity() {
         SingleChoiceWithConfirmationDialogFragment.show(supportFragmentManager, volume)
     }
 
-    private fun setupSingleChoiceWithConfirmationDialogFragment() {
+    private fun setupSingleChoiceWithConfirmationDialogFragmentListener() {
         SingleChoiceWithConfirmationDialogFragment.setupListener(supportFragmentManager, this) {
             this.volume = it
             updateUi()
         }
     }
 
+    private fun showMultipleChoiceDialogFragment() {
+        MultipleChoiceDialogFragment.show(supportFragmentManager, color)
+    }
+
+    private fun setupMultipleChoiceDialogFragmentListener() {
+        MultipleChoiceDialogFragment.setupListener(supportFragmentManager, this) {
+            this.color = it
+            updateUi()
+        }
+    }
+
     private fun updateUi() {
         binding.currentVolumeTextView.text = getString(R.string.current_volume, volume)
-//        binding.colorView.setBackgroundColor(color)
+        binding.colorView.setBackgroundColor(color)
     }
 
     companion object {
         private const val KEY_VOLUME = "KEY_VOLUME"
+        private const val KEY_COLOR = "KEY_COLOR"
     }
 }
