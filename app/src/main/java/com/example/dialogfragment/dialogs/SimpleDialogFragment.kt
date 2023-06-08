@@ -1,11 +1,10 @@
-package com.example.dialogfragment.level1
+package com.example.dialogfragment.dialogs
 
 import android.app.AlertDialog
 import android.app.Dialog
 import android.content.DialogInterface
 import android.os.Bundle
 import android.util.Log
-import android.widget.Toast
 import androidx.core.os.bundleOf
 import androidx.fragment.app.DialogFragment
 import com.example.dialogfragment.R

@@ -14,6 +14,7 @@
     <string name="dialog_fragment_multiple_choice_with_confirmation">Dialog Fragment (multiple choice with confirmation)</string>
     <string name="current_volume">CurrentVolume: %1$d%%</string>
     <string name="current_color">Current color:</string>
+    <string name="enter_volume">Enter volume</string>
 
     <string-array name="colors">
         <item>Red</item>

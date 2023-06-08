@@ -6,11 +6,11 @@ import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
 import androidx.fragment.app.FragmentResultListener
 import com.example.dialogfragment.databinding.ActivityMainBinding
-import com.example.dialogfragment.level1.MultipleChoiceDialogFragment
-import com.example.dialogfragment.level1.SimpleDialogFragment
-import com.example.dialogfragment.level1.SingleChoiceDialogFragment
-import com.example.dialogfragment.level1.SingleChoiceWithConfirmationDialogFragment
-import com.example.dialogfragment.level1.showToast
+import com.example.dialogfragment.dialogs.MultipleChoiceDialogFragment
+import com.example.dialogfragment.dialogs.SimpleDialogFragment
+import com.example.dialogfragment.dialogs.SingleChoiceDialogFragment
+import com.example.dialogfragment.dialogs.SingleChoiceWithConfirmationDialogFragment
+import com.example.dialogfragment.dialogs.showToast
 import kotlin.properties.Delegates.notNull
 
 class MainActivity : AppCompatActivity() {

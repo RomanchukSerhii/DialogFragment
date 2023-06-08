@@ -1,4 +1,4 @@
-package com.example.dialogfragment.level1
+package com.example.dialogfragment.dialogs
 
 import android.content.Context
 import android.widget.Toast
