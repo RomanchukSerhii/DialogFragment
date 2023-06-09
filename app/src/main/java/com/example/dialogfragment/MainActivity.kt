@@ -3,6 +3,7 @@ package com.example.dialogfragment
 import android.content.DialogInterface
 import android.graphics.Color
 import android.os.Bundle
+import android.os.PersistableBundle
 import androidx.appcompat.app.AppCompatActivity
 import androidx.fragment.app.FragmentResultListener
 import com.example.dialogfragment.databinding.ActivityMainBinding
@@ -58,6 +59,14 @@ class MainActivity : AppCompatActivity() {
         setupSingleChoiceWithConfirmationDialogFragmentListener()
         setupMultipleChoiceDialogFragmentListener()
         setupCustomInputDialogFragmentListener()
+    }
+
+    override fun onSaveInstanceState(outState: Bundle) {
+        super.onSaveInstanceState(outState)
+        outState.putInt(KEY_VOLUME, volume)
+        outState.putInt(KEY_COLOR, color)
+        outState.putInt(KEY_FIRST_REQUEST_KEY, currentVolume1)
+        outState.putInt(KEY_SECOND_REQUEST_KEY, currentVolume2)
     }
 
     private fun showSimpleDialogFragment() {
