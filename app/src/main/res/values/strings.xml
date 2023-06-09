@@ -15,6 +15,10 @@
     <string name="current_volume">CurrentVolume: %1$d%%</string>
     <string name="current_color">Current color:</string>
     <string name="enter_volume">Enter volume</string>
+    <string name="dialog_fragment_input_and_validation">Dialog Fragment (input and validation)</string>
+    <string name="dialog_fragment_input_and_validation_2">Dialog Fragment (input and validation #2)</string>
+    <string name="current_volume_1">Current Volume 1: %1$d%%</string>
+    <string name="current_volume_2">Current Volume 2: %1$d%%</string>
 
     <string-array name="colors">
         <item>Red</item>
